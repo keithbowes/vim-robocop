@@ -21,7 +21,7 @@ hi Identifier   term=underline                    ctermfg=grey                  
 hi Ignore                                         ctermfg=black                           guifg=bg
 hi PreProc      term=underline                    ctermfg=white                           guifg=Wheat
 hi Search       term=reverse                                           guibg=cyan         guifg=white
-hi Special      term=bold                         ctermfg=LightRed                        guifg=LightMagenta
+hi Special      term=bold                         ctermfg=LightMagenta                    guifg=LightMagenta
 hi Statement    term=bold                         ctermfg=Yellow                          guifg=Yellow       gui=NONE
 hi Type                                           ctermfg=LightGreen                      guifg=grey         gui=none
 hi Error        term=reverse     ctermbg=Red      ctermfg=White        guibg=Red          guifg=White
@@ -50,4 +50,3 @@ if has("gui_running") || &t_Co < 256
 endif
 
 hi Identifier                                     ctermfg=LightCyan
-hi PreProc                                        ctermfg=LightCyan
