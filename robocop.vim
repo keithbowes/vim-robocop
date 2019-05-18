@@ -17,9 +17,15 @@ endif
 hi Normal		ctermbg=Black  ctermfg=lightgreen guibg=black		 guifg=lightgreen
 hi Comment		term=bold	   ctermfg=cyan       guifg=cyan
 hi Constant		term=underline ctermfg=LightGreen guifg=White	gui=NONE
-hi Identifier	term=underline ctermfg=LightCyan  guifg=lightcyan
+hi Identifier	term=underline ctermfg=gray  guifg=lightcyan
 hi Ignore					   ctermfg=black	  guifg=bg
-hi PreProc		term=underline ctermfg=Lightcyan  guifg=Wheat
+" In terminals with 256+ colors
+if has("eval") && &t_Co >= 256
+    hi Identifier		ctermfg=Lightcyan
+    hi PreProc		ctermfg=Lightcyan
+else
+    hi PreProc		term=underline ctermfg=white  guifg=Wheat
+endif
 hi Search		term=reverse					  guifg=white	guibg=cyan
 hi Special		term=bold	   ctermfg=LightRed   guifg=LightMagenta
 hi Statement	term=bold	   ctermfg=Yellow	  guifg=Yellow gui=NONE
