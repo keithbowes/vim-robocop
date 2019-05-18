@@ -15,14 +15,14 @@ if has("eval")
 endif
 
 hi Normal		ctermbg=Black  ctermfg=lightgreen guibg=black		 guifg=lightgreen
-hi Comment		term=bold	   ctermfg=cyan       guifg=darkcyan
+hi Comment		term=bold	   ctermfg=cyan       guifg=cyan
 hi Constant		term=underline ctermfg=LightGreen guifg=White	gui=NONE
-hi Identifier	term=underline ctermfg=LightCyan  guifg=#00ffff
+hi Identifier	term=underline ctermfg=LightCyan  guifg=lightcyan
 hi Ignore					   ctermfg=black	  guifg=bg
 hi PreProc		term=underline ctermfg=Lightcyan  guifg=Wheat
 hi Search		term=reverse					  guifg=white	guibg=cyan
-hi Special		term=bold	   ctermfg=LightRed   guifg=magenta
-hi Statement	term=bold	   ctermfg=Yellow	  guifg=#ffff00 gui=NONE
+hi Special		term=bold	   ctermfg=LightRed   guifg=LightMagenta
+hi Statement	term=bold	   ctermfg=Yellow	  guifg=Yellow gui=NONE
 hi Type						   ctermfg=LightGreen guifg=grey	gui=none
 hi Error		term=reverse   ctermbg=Red	  ctermfg=White guibg=Red  guifg=White
 hi Todo			term=standout  ctermbg=Yellow ctermfg=Black guifg=cyan guibg=Yellow
