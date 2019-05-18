@@ -17,7 +17,7 @@ endif
 hi Normal                        ctermbg=Black    ctermfg=lightgreen   guibg=black        guifg=lightgreen
 hi Comment      term=bold                         ctermfg=cyan                            guifg=cyan
 hi Constant     term=underline                    ctermfg=LightGreen                      guifg=White        gui=NONE
-hi Identifier   term=underline                    ctermfg=grey                            guifg=lightcyan
+hi Identifier   term=underline   ctermbg=bg       ctermfg=lightcyan                       guifg=lightcyan
 hi Ignore                                         ctermfg=black                           guifg=bg
 hi PreProc      term=underline                    ctermfg=white                           guifg=Wheat
 hi Search       term=reverse                                           guibg=cyan         guifg=white
@@ -44,9 +44,9 @@ hi WarningMsg   term=standout                     ctermfg=LightRed              
 hi Visual       term=reverse                                           guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
 hi HtmlLink     term=bold                                              guibg=cyan         guifg=black                    cterm=bold
 
-" Overrides for terminals with 256+ colors
-if has("gui_running") || &t_Co < 256
+" Overrides for 8-color terminals
+if has("gui_running") || &t_Co > 8
     finish
 endif
 
-hi Identifier                                     ctermfg=LightCyan
+hi Identifier                                     ctermfg=grey
