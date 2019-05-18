@@ -19,13 +19,7 @@ hi Comment      term=bold                         ctermfg=cyan                  
 hi Constant     term=underline                    ctermfg=LightGreen                      guifg=White        gui=NONE
 hi Identifier   term=underline                    ctermfg=grey                            guifg=lightcyan
 hi Ignore                                         ctermfg=black                           guifg=bg
-" In terminals with 256+ colors
-if has("eval") && &t_Co >= 256
-    hi Identifier                                 ctermfg=Lightcyan
-    hi PreProc                                    ctermfg=Lightcyan
-else
-    hi PreProc  term=underline                    ctermfg=white                           guifg=Wheat
-endif
+hi PreProc      term=underline                    ctermfg=white                           guifg=Wheat
 hi Search       term=reverse                                           guibg=cyan         guifg=white
 hi Special      term=bold                         ctermfg=LightRed                        guifg=LightMagenta
 hi Statement    term=bold                         ctermfg=Yellow                          guifg=Yellow       gui=NONE
@@ -49,3 +43,11 @@ hi Title        term=bold                         ctermfg=LightMagenta          
 hi WarningMsg   term=standout                     ctermfg=LightRed                        guifg=Red
 hi Visual       term=reverse                                           guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
 hi HtmlLink     term=bold                                              guibg=cyan         guifg=black                    cterm=bold
+
+" Overrides for terminals with 256+ colors
+if has("gui_running") || &t_Co < 256
+    finish
+endif
+
+hi Identifier                                     ctermfg=LightCyan
+hi PreProc                                        ctermfg=LightCyan
