@@ -37,8 +37,8 @@ hi MoreMsg      term=bold                         ctermfg=LightGreen            
 hi NonText      term=bold                         ctermfg=cyan                            guifg=cyan        gui=bold
 hi Question     term=standout                     ctermfg=LightGreen                      guifg=Cyan        gui=bold
 hi SpecialKey   term=bold                         ctermfg=Lightcyan                       guifg=Cyan
-hi StatusLine   term=reverse,bold                                      guibg=darkcyan     guifg=White       gui=NONE     cterm=reverse
-hi StatusLineNC term=reverse                                           guibg=#333333      guifg=white       gui=NONE     cterm=reverse
+hi StatusLine   term=reverse,bold ctermbg=black   ctermfg=lightgrey    guibg=darkcyan     guifg=White       gui=NONE     cterm=reverse
+hi StatusLineNC term=reverse      ctermbg=black   ctermfg=white        guibg=#333333      guifg=white       gui=NONE     cterm=reverse
 hi Title        term=bold                         ctermfg=LightMagenta                    guifg=Pink        gui=bold
 hi WarningMsg   term=standout                     ctermfg=LightRed                        guifg=Red
 hi Visual       term=reverse                                           guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
