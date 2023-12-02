@@ -16,7 +16,7 @@ endif
 
 hi Normal                        ctermbg=Black    ctermfg=lightgreen   guibg=black        guifg=lightgreen
 hi Comment      term=bold                         ctermfg=cyan                            guifg=cyan
-hi Constant     term=underline                    ctermfg=LightGreen                      guifg=White        gui=NONE
+hi Constant     term=underline                    ctermfg=lightyellow                     guifg=White        gui=NONE
 hi Identifier   term=underline   ctermbg=bg       ctermfg=lightcyan                       guifg=lightcyan
 hi Ignore                                         ctermfg=black                           guifg=bg
 hi PreProc      term=underline                    ctermfg=white                           guifg=Wheat
