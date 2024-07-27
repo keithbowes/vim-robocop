@@ -43,6 +43,10 @@ hi Title        term=bold                         ctermfg=LightMagenta          
 hi WarningMsg   term=standout                     ctermfg=LightRed                        guifg=Red
 hi Visual       term=reverse                                           guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
 hi HtmlLink     term=bold                                              guibg=cyan         guifg=black                    cterm=bold
+if has("nvim")
+    hi clear Spellbad
+    hi SpellBad     term=reverse     ctermbg=Red      ctermfg=White        guibg=Red          guifg=White
+endif
 
 " Overrides for 8-color terminals
 if has("gui_running") || &t_Co > 8
