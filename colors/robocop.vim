@@ -43,9 +43,9 @@ hi Title        term=bold                         ctermfg=LightMagenta          
 hi WarningMsg   term=standout                     ctermfg=LightRed                        guifg=Red
 hi Visual       term=reverse                                           guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
 hi HtmlLink     term=bold                                              guibg=cyan         guifg=black                    cterm=bold
-if has("nvim")
+if has("nvim-0.10.0")
     hi clear Spellbad
-    hi SpellBad     term=reverse     ctermbg=Red      ctermfg=White        guibg=Red          guifg=White
+    hi SpellBad     term=reverse     ctermbg=Red      ctermfg=White                                         gui=undercurl
 endif
 
 " Overrides for 8-color terminals
