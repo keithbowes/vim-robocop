@@ -23,29 +23,31 @@ hi PreProc      term=underline                    ctermfg=white                 
 hi Search       term=reverse                                           guibg=cyan         guifg=white
 hi Special      term=bold                         ctermfg=LightMagenta                    guifg=LightMagenta
 hi Statement    term=bold                         ctermfg=Yellow                          guifg=Yellow       gui=NONE
-hi Type                                           ctermfg=LightGreen                      guifg=grey         gui=none
+hi Type                                           ctermfg=LightGreen                      guifg=LightGrey    gui=none
 hi Error        term=reverse     ctermbg=Red      ctermfg=White        guibg=Red          guifg=White
 hi Todo         term=standout    ctermbg=Yellow   ctermfg=Black        guibg=Yellow       guifg=cyan
+hi String       term=bold        ctermbg=black    ctermfg=LightYellow                     guifg=white
 " From the source:
 hi Cursor                                                              guibg=purple       guifg=red
 hi Directory    term=bold                         ctermfg=LightCyan                       guifg=Cyan
 hi ErrorMsg     term=standout    ctermbg=DarkRed  ctermfg=White        guibg=Red          guifg=White
 hi IncSearch    term=reverse                                                                                gui=reverse  cterm=reverse
 hi LineNr       term=underline                    ctermfg=Yellow                          guifg=Yellow
-hi ModeMsg      term=bold                                                                                   gui=bold     cterm=bold
+hi ModeMsg      term=bold                         ctermfg=LightGreen                                        gui=bold     cterm=bold
 hi MoreMsg      term=bold                         ctermfg=LightGreen                      guifg=SeaGreen    gui=bold
 hi NonText      term=bold                         ctermfg=cyan                            guifg=cyan        gui=bold
 hi Question     term=standout                     ctermfg=LightGreen                      guifg=Cyan        gui=bold
 hi SpecialKey   term=bold                         ctermfg=Lightcyan                       guifg=Cyan
 hi StatusLine   term=reverse,bold ctermbg=black   ctermfg=lightgrey    guibg=darkcyan     guifg=White       gui=NONE     cterm=reverse
-hi StatusLineNC term=reverse      ctermbg=black   ctermfg=white        guibg=#333333      guifg=white       gui=NONE     cterm=reverse
+hi StatusLineNC term=reverse      ctermbg=black   ctermfg=grey         guibg=#333333      guifg=white       gui=NONE     cterm=reverse
 hi Title        term=bold                         ctermfg=LightMagenta                    guifg=Pink        gui=bold
 hi WarningMsg   term=standout                     ctermfg=LightRed                        guifg=Red
-hi Visual       term=reverse                                           guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
+hi Visual       term=reverse     ctermbg=black    ctermfg=white        guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
 hi HtmlLink     term=bold                                              guibg=cyan         guifg=black                    cterm=bold
-if has("nvim-0.10.0")
-    hi clear Spellbad
-    hi SpellBad     term=reverse     ctermbg=Red      ctermfg=White                                         gui=undercurl
+" Don't use curly underlines under misspellings when running in terminals (but only in GUIs) in Neovim 0.10+
+if has("nvim-0.10.0") && &t_Co <= 256
+    hi SpellBad     term=reverse     ctermbg=Red      ctermfg=White        guibg=Red         guifg=White    gui=NONE     cterm=NONE
+    hi SpellCap     term=reverse     ctermbg=blue                          guibg=blue        guifg=White    gui=NONE     cterm=NONE
 endif
 
 " Overrides for 8-color terminals
