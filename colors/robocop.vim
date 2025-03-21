@@ -5,6 +5,7 @@
 " Last Change:  2003 May 02
 
 hi clear
+set notermguicolors
 set background=dark
 if exists("syntax_on")
   syntax reset
@@ -17,8 +18,9 @@ endif
 hi Normal                        ctermbg=Black    ctermfg=lightgreen   guibg=black        guifg=lightgreen
 hi Comment      term=bold                         ctermfg=cyan                            guifg=cyan
 hi Constant     term=underline                    ctermfg=lightyellow                     guifg=White        gui=NONE
-hi Identifier   term=underline   ctermbg=bg       ctermfg=lightcyan                       guifg=lightcyan
-hi Ignore                                         ctermfg=black                           guifg=bg
+hi Identifier   term=underline   ctermbg=bg       ctermfg=lightcyan                       guifg=lightcyan                cterm=bold
+hi Identifier   term=underline   ctermbg=bg       ctermfg=lightcyan                       guifg=lightcyan                cterm=bold
+hi Function     term=underline   ctermbg=bg       ctermfg=lightcyan                       guifg=lightcyan
 hi PreProc      term=underline                    ctermfg=white                           guifg=Wheat
 hi Search       term=reverse                                           guibg=cyan         guifg=white
 hi Special      term=bold                         ctermfg=LightMagenta                    guifg=LightMagenta
@@ -38,17 +40,14 @@ hi MoreMsg      term=bold                         ctermfg=LightGreen            
 hi NonText      term=bold                         ctermfg=cyan                            guifg=cyan        gui=bold
 hi Question     term=standout                     ctermfg=LightGreen                      guifg=Cyan        gui=bold
 hi SpecialKey   term=bold                         ctermfg=Lightcyan                       guifg=Cyan
-hi StatusLine   term=reverse,bold ctermbg=black   ctermfg=lightgrey    guibg=darkcyan     guifg=White       gui=NONE     cterm=reverse
+hi StatusLine   term=reverse,bold ctermbg=white   ctermfg=DarkBlue     guibg=darkcyan     guifg=White       gui=NONE     cterm=reverse
 hi StatusLineNC term=reverse      ctermbg=black   ctermfg=grey         guibg=#333333      guifg=white       gui=NONE     cterm=reverse
 hi Title        term=bold                         ctermfg=LightMagenta                    guifg=Pink        gui=bold
 hi WarningMsg   term=standout                     ctermfg=LightRed                        guifg=Red
-hi Visual       term=reverse     ctermbg=black    ctermfg=white        guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
+hi Visual       term=reverse     ctermbg=black    ctermfg=lightgrey    guibg=darkgreen    guifg=white       gui=NONE     cterm=reverse
 hi HtmlLink     term=bold                                              guibg=cyan         guifg=black                    cterm=bold
-" Don't use curly underlines under misspellings when running in terminals (but only in GUIs) in Neovim 0.10+
-if has("nvim-0.10.0") && &t_Co <= 256
-    hi SpellBad     term=reverse     ctermbg=Red      ctermfg=White        guibg=Red         guifg=White    gui=NONE     cterm=NONE
-    hi SpellCap     term=reverse     ctermbg=blue                          guibg=blue        guifg=White    gui=NONE     cterm=NONE
-endif
+hi SpellBad     term=reverse     ctermbg=Red      ctermfg=White                                                          cterm=NONE
+hi SpellCap     term=reverse     ctermbg=blue                                                                            cterm=NONE
 
 " Overrides for 8-color terminals
 if has("gui_running") || &t_Co > 8
